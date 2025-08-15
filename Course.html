@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="container">
+    <!-- Login Page -->
+    <div id="loginPage">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p><a href="#" onclick="showPage('accountPage')">Create Account</a></p>
+    </div>
+
+    <!-- Account Creation Page -->
+    <div id="accountPage" style="display: none;">
+      <h2>Create Account</h2>
+      <input type="text" id="newUsername" placeholder="Username" />
+      <input type="password" id="newPassword" placeholder="Password" />
+      <button onclick="createAccount()">Create</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" style="display: none;">
+      <h2>Available Courses</h2>
+      <div id="courseList"></div>
+    </div>
+
+    <!-- Payment Page -->
+    <div id="paymentPage" style="display: none;">
+      <h2>Payment for <span id="selectedCourse"></span></h2>
+      <button onclick="makePayment()">Pay Fee</button>
+    </div>
+
+    <!-- Welcome Page -->
+    <div id="welcomePage" style="display: none;">
+      <h2 id="welcomeMessage"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
